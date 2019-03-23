@@ -6,7 +6,7 @@
  * Time: 19:22
  */
 
-class Pagos
+class Pagos extends CI_Model
 {
 
 }

@@ -6,7 +6,7 @@
  * Time: 19:21
  */
 
-class Administrador
+class Administrador extends CI_Model
 {
 
 }

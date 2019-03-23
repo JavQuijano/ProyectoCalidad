@@ -6,7 +6,7 @@
  * Time: 19:15
  */
 
-class Empleado
+class Empleado extends CI_Model
 {
 
 }
