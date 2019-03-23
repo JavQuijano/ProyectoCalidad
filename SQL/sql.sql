@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 23, 2019 at 01:11 AM
+-- Generation Time: Mar 23, 2019 at 01:24 AM
 -- Server version: 5.7.25
 -- PHP Version: 7.3.1
 
@@ -13,6 +13,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `ProyCalidad`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Administradores`
+--
+
+CREATE TABLE `Administradores` (
+  `id_admin` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `apellido` varchar(100) NOT NULL,
+  `usuario` varchar(100) NOT NULL,
+  `contra` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -103,6 +117,13 @@ CREATE TABLE `HorasTrabajadas` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `Administradores`
+--
+ALTER TABLE `Administradores`
+  ADD PRIMARY KEY (`id_admin`),
+  ADD UNIQUE KEY `usuario` (`usuario`);
 
 --
 -- Indexes for table `Empleados`
