@@ -1,0 +1,313 @@
+/*------------------------------------------------------------------
+
+    Main Style Stylesheet
+    Project:        Vortex. |  StartUp Landing Page Template
+    Version:        1.0
+    Author:         Gnawi Themes
+    Last change:    8/29/2016
+    Primary use:    Landing,Startup and Showcase.
+
+-------------------------------------------------------------------*/
+/*-- Imports (only visible on scss file) --*/
+@import "https://fonts.googleapis.com/css?family=Raleway:300,400,700";
+/*========================================
+          Base Style
+========================================*/
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #496174;
+  background: #fff;
+  font-size: 14px;
+  line-height: 24px; }
+
+.section-padding {
+  padding: 100px 0; }
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/**
+ * Simple fade transition,
+ */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out; }
+
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8; }
+
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0; }
+
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out; }
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1; }
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0; }
+
+/*-- Preloader --*/
+.page-preloader {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #44c5ee;
+  z-index: 100000; }
+
+.spinner {
+  position: relative;
+  top: 35%;
+  margin: 100px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px; }
+
+.spinner > div {
+  background-color: #fff;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out; }
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s; }
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s; }
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s; }
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s; }
+
+@-webkit-keyframes sk-stretchdelay {
+  0%,
+    40%,
+    100% {
+    -webkit-transform: scaleY(0.4); }
+  20% {
+    -webkit-transform: scaleY(1); } }
+@keyframes sk-stretchdelay {
+  0%,
+    40%,
+    100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4); }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1); } }
+/*========================================
+            Typography
+========================================*/
+/*-- Typo Style --*/
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 35px;
+  color: #fff; }
+
+h2 {
+  font-size: 36px;
+  letter-spacing: 0.08em; }
+
+h3 {
+  font-size: 32px;
+  letter-spacing: 0.08em; }
+
+h4 {
+  font-size: 24px;
+  letter-spacing: 0.08em; }
+
+h5 {
+  font-size: 18px;
+  letter-spacing: 0.08em; }
+
+h6 {
+  font-size: 16px; }
+
+p {
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  line-height: 24px; }
+
+/*========================================
+            Buttons Style
+========================================*/
+.btn-blue {
+  background: #44c5ee;
+  padding: 10px 28px;
+  border: 2px solid #44c5ee;
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  -webkit-transition: 0.5s all;
+          transition: 0.5s all;
+  box-shadow: 0px 0px 60px 0px rgba(68, 197, 238, 0.6);
+  outline: none !important; }
+
+.btn-blue:hover,
+.btn-blue:focus,
+.btn-blue:active {
+  background: #fff;
+  color: #496174; }
+
+
+@media (max-width: 992px) {
+  .home .container {
+    text-align: center; }
+    .home .container h1 {
+      font-size: 36px; }
+    .home .container h2 {
+      font-size: 26px; }
+
+  section .col-md-4 {
+    margin-bottom: 40px; }
+
+ .form-container .form-inline .btn {
+    position: relative;
+    right: 143px; } }
+
+@media (max-width: 767px) {
+  .home .container {
+    text-align: center; }
+    .home .container h1 {
+      font-size: 34px; }
+    .home .container h2 {
+      font-size: 24px; }
+
+  .form-container .form-inline .form-control {
+    width: 80%; }
+  .form-container .form-inline .btn {
+    position: relative;
+    right: 40px;
+    margin-top: 40px; }
+}
+
+.home {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  padding: 190px 0px 120px 0px;
+  background: url(../img/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+    .home .caption h2 {
+      color: #fff; }
+    .home .caption p {
+      font-size: 18px;
+      margin-top: 25px;
+      color: #fff; }
+    .home .caption .btn {
+      margin-top: 25px; }
+    .home .caption .btn-blue {
+      margin-left: 15px; }
+      .home .caption .btn-blue i {
+        position: relative;
+        top: 5px;
+        margin-right: 10px; }
+  .home .signup-form {
+    background-color: #fff;
+    padding: 45px;
+    border-radius: 5px; }
+    .home .signup-form input {
+      border: 1px solid #eee;
+      height: 38px;
+      box-shadow: none !important; }
+    .home .signup-form input:focus {
+      border-color: #44c5ee; }
+    .home .signup-form .form-control {
+      font-size: 16px;
+      padding: 10px 15px;
+      color: #555;
+      background-color: #fff;
+      border-radius: 3px; }
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; }
+
+  .contenedor {
+    width: 90%;
+    height: 100%;
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    background: #ccc;
+  }
+  .widget {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .widget p {
+    display: inline-block;
+    line-height: 1em;
+  }
+  .fecha {
+    font-family: arial;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    background: rgba(0,0,0,.5);
+    padding: 20px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .reloj {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    width: 100%;
+    padding: 20px;
+    font-size: 4em;
+    text-align: center;
+    background: rgba(0,0,0,.5);
+    border-radius: 5px;
+  }
+  .reloj .cajaSegundos {
+    display: inline-flex;
+
+  }
+  .reloj .ampm, .reloj .segundos{
+    display: block;
+    font-size: 2rem;
+  }
