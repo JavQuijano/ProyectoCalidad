@@ -22,8 +22,14 @@ class Registro_empleados extends CI_Controller {
 	{
         $array['bienvenida'] = 'Bienvenido a Registrar Empleado';
         $this->load->view('header');
-        $this->load->view('registrar_empleado', $array);
         $this->load->view('footer');
+
+        //$this->load->view('registrar_empleado', $array);
+        $data = array();
+        $data['content'] = $this->load->view('registrar_empleado', $array,true);
+        $this->load->view('layout',$data, false);
+
+
     }
     
     public function registrar_empleado(){
