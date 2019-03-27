@@ -56,3 +56,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['entrada'] = 'welcome/entrada';
 $route['salida'] = 'welcome/salida';
 $route['administrador'] = 'welcome/administrador';
+
