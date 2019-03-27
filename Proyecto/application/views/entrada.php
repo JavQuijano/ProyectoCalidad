@@ -26,13 +26,13 @@
 
     <!-- // PLUGINS (css files) // -->
 
-    <link href="../assets/js/plugins/bootsnav_files/skins/color.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/js/plugins/bootsnav_files/skins/color.css" rel="stylesheet">
 
-    <link href="../assets/js/plugins/bootsnav_files/css/animate.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/js/plugins/bootsnav_files/css/animate.css" rel="stylesheet">
 
-    <link href="../assets/js/plugins/bootsnav_files/css/bootsnav.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/js/plugins/bootsnav_files/css/bootsnav.css" rel="stylesheet">
 
-    <link href="../assets/js/plugins/bootsnav_files/css/overwrite.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/js/plugins/bootsnav_files/css/overwrite.css" rel="stylesheet">
 
     <!--// ICONS //-->
 
