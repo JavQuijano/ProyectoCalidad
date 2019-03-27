@@ -26,13 +26,15 @@
 
     <!-- // PLUGINS (css files) // -->
 
-    <link href="../../assets/js/plugins/bootsnav_files/skins/color.css" rel="stylesheet">
 
-    <link href="../../assets/js/plugins/bootsnav_files/css/animate.css" rel="stylesheet">
+    <link href="<?php echo base_url("assets/js/plugins/bootsnav_files/skins/color.css"); ?>" rel="stylesheet">
 
-    <link href="../../assets/js/plugins/bootsnav_files/css/bootsnav.css" rel="stylesheet">
+    <link href="<?php echo base_url("assets/js/plugins/bootsnav_files/css/animate.css"); ?>" rel="stylesheet">
 
-    <link href="../../assets/js/plugins/bootsnav_files/css/overwrite.css" rel="stylesheet">
+    <link href="<?php echo base_url("assets/js/plugins/bootsnav_files/css/bootsnav.css"); ?>" rel="stylesheet">
+
+    <link href="<?php echo base_url('assets/js/plugins/bootsnav_files/css/overwrite.css'); ?>" rel="stylesheet">
+
 
     <!--// ICONS //-->
 
@@ -44,7 +46,9 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="../../assets/css/main.css" rel="stylesheet">
+
+    <link href="<?php echo base_url('assets/css/main.css'); ?>" rel="stylesheet">
+
 
 </head>
 
@@ -189,15 +193,17 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script src="../../assets/js/plugins/bootsnav_files/js/bootsnav.js"></script>
 
-    <script src="../../assets/js/plugins/typed.js-master/typed.js-master/dist/typed.min.js"></script>
+    <script src="<?php echo base_url('assets/js/plugins/bootsnav_files/js/bootsnav.js') ?>"></script>
 
-    <script src="../../assets/js/plugins/particles.js-master/particles.js-master/particles.min.js"></script>
+    <script src="<?php echo base_url('assets/js/plugins/typed.js-master/typed.js-master/dist/typed.min.js') ?>"></script>
 
-    <script src="../../assets/js/particales-script.js"></script>
+    <script src="<?php echo base_url('assets/js/plugins/particles.js-master/particles.js-master/particles.min.js') ?>"></script>
 
-    <script src="../../assets/js/main.js"></script>
+    <script src="<?php echo base_url('assets/js/particales-script.js') ?>"></script>
+
+    <script src="<?php echo base_url("assets/js/main.js") ?>"></script>
+
 
 </body>
 

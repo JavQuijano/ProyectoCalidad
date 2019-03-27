@@ -53,5 +53,6 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-
-$route['entrada_bonita'] = 'welcome/entrada_chida_javier';
+$route['entrada'] = 'welcome/entrada';
+$route['salida'] = 'welcome/salida';
+$route['adminitrador'] = 'welcome/adminitrador';
