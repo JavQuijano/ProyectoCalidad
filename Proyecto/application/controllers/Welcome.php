@@ -31,7 +31,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('salida');
 	}
 
-	public function adminitrador(){
-		$this->load->view('adminitrador');
+	public function administrador(){
+		$this->load->view('administrador');
 	}
 }
