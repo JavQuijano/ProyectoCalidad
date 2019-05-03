@@ -9,6 +9,7 @@
 class Empleado extends CI_Model
 {
     private $tabla = 'empleados';
+    private $encryption_key = 'jsoft';
     private $usuario;
     private $contra;
     private $nombres;
@@ -22,9 +23,11 @@ class Empleado extends CI_Model
     private $fecha_creacion;
     private $fecha_inicio;
 
-    public function obtener_empleado_por($columna, $param ){
+
+    public function obtener_empleado_por($columna, $param){
         return $this->db->get_where($this->tabla, array($columna => $param))->result();
     }
+
 
     public function guardar_empleado($empleado){
         $this->db->insert($this->tabla, $empleado);

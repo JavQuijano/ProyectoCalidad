@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class CI_Encrypt {
 
 	/**
-	 * Reference to the user's encryption key
+	 * Reference to the user's encrypter key
 	 *
 	 * @var string
 	 */
@@ -103,7 +103,7 @@ class CI_Encrypt {
 	// --------------------------------------------------------------------
 
 	/**
-	 * Fetch the encryption key
+	 * Fetch the encrypter key
 	 *
 	 * Returns it as MD5 in order to have an exact-length 128 bit key.
 	 * Mcrypt is sensitive to keys that are not the correct length
@@ -124,7 +124,7 @@ class CI_Encrypt {
 
 			if ( ! self::strlen($key))
 			{
-				show_error('In order to use the encryption class requires that you set an encryption key in your config file.');
+				show_error('In order to use the encrypter class requires that you set an encrypter key in your config file.');
 			}
 		}
 
@@ -134,7 +134,7 @@ class CI_Encrypt {
 	// --------------------------------------------------------------------
 
 	/**
-	 * Set the encryption key
+	 * Set the encrypter key
 	 *
 	 * @param	string
 	 * @return	CI_Encrypt
@@ -196,7 +196,7 @@ class CI_Encrypt {
 	 * Takes an encoded string from the original Encryption class algorithms and
 	 * returns a newly encoded string using the improved method added in 2.0.0
 	 * This allows for backwards compatibility and a method to transition to the
-	 * new encryption algorithms.
+	 * new encrypter algorithms.
 	 *
 	 * For more details, see https://codeigniter.com/user_guide/installation/upgrade_200.html#encryption
 	 *

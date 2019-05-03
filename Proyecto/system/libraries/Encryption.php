@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * CodeIgniter Encryption Class
  *
- * Provides two-way keyed encryption via PHP's MCrypt and/or OpenSSL extensions.
+ * Provides two-way keyed encrypter via PHP's MCrypt and/or OpenSSL extensions.
  *
  * @package		CodeIgniter
  * @subpackage	Libraries
@@ -158,7 +158,7 @@ class CI_Encryption {
 
 		if ( ! $this->_drivers['mcrypt'] && ! $this->_drivers['openssl'])
 		{
-			show_error('Encryption: Unable to find an available encryption driver.');
+			show_error('Encryption: Unable to find an available encrypter driver.');
 		}
 
 		isset(self::$func_overload) OR self::$func_overload = (extension_loaded('mbstring') && ini_get('mbstring.func_overload'));
@@ -375,7 +375,7 @@ class CI_Encryption {
 			return FALSE;
 		}
 
-		isset($params['key']) OR $params['key'] = $this->hkdf($this->_key, 'sha512', NULL, self::strlen($this->_key), 'encryption');
+		isset($params['key']) OR $params['key'] = $this->hkdf($this->_key, 'sha512', NULL, self::strlen($this->_key), 'encrypter');
 
 		if (($data = $this->{'_'.$this->_driver.'_encrypt'}($data, $params)) === FALSE)
 		{
@@ -512,7 +512,7 @@ class CI_Encryption {
 
 		if (isset($params['hmac_digest']))
 		{
-			// This might look illogical, but it is done during encryption as well ...
+			// This might look illogical, but it is done during encrypter as well ...
 			// The 'base64' value is effectively an inverted "raw data" parameter
 			$digest_size = ($params['base64'])
 				? $this->_digests[$params['hmac_digest']] * 2
@@ -547,7 +547,7 @@ class CI_Encryption {
 			$data = base64_decode($data);
 		}
 
-		isset($params['key']) OR $params['key'] = $this->hkdf($this->_key, 'sha512', NULL, self::strlen($this->_key), 'encryption');
+		isset($params['key']) OR $params['key'] = $this->hkdf($this->_key, 'sha512', NULL, self::strlen($this->_key), 'encrypter');
 
 		return $this->{'_'.$this->_driver.'_decrypt'}($data, $params);
 	}

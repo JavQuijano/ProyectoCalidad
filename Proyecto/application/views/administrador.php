@@ -139,41 +139,23 @@
       </div>
     </div>
                 </div>
-
                 <!-- Sign Up -->
-
                 <div class="col-md-5 col-md-offset-1">
-
-                    <form class="signup-form">
-
+                    <form class="signup-form" action="<?php echo base_url();?>index.php/Login_administrador/ingresar_menu" method="post">
                         <h2 class="text-center">Iniciar Sesión</h2>
-
                         <hr>
-
                         <div class="form-group">
-
-                            <input type="text" class="form-control" placeholder="Usuario" required="required">
-
+                            <input type="text" name="user" class="form-control" placeholder="Usuario" required="required">
                         </div>
-
                         <div class="form-group">
-
-                            <input type="password" class="form-control" placeholder="Contraseña" required="required">
-
+                            <input type="password" name="contra" class="form-control" placeholder="Contraseña" required="required">
                         </div>
-
                         <div class="form-group text-center">
-
                             <button type="submit" class="btn btn-blue btn-block">Iniciar</button>
-
                         </div>
-
                     </form>
-
                 </div>
-
             </div>
-
         </div>
 
 

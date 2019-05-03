@@ -28,16 +28,12 @@ class Registro_empleados extends CI_Controller {
         $data = array();
         $data['content'] = $this->load->view('registrar_empleado', $array,true);
         $this->load->view('layout',$data, false);
-
-
     }
     
     public function registrar_empleado(){
         
         $empleado = new stdClass();
 
-        $empleado->usuario = $this->input->post('usuario');
-        $empleado->contra  =  $this->input->post('contra');
         $empleado->nombres = $this->input->post('nombres');
         $empleado->apellidos = $this->input->post('apellidos');
         $empleado->hora_entrada = $this->input->post('hora_entrada');
@@ -48,6 +44,8 @@ class Registro_empleados extends CI_Controller {
         $empleado->descuento_por_hora = $this->input->post('descuento_por_hora');
         $empleado->fecha_creacion = date("Y-m-d H:i:s");
         $empleado->fecha_inicio = $this->input->post('fecha_inicio');
+        $empleado->usuario = substr($empleado->apellidos,0,2).rand(1000,99999);
+        $empleado->contra  =  crypt($empleado->usuario, "jsoft");
 
 
         $this->empleado->guardar_empleado($empleado);
