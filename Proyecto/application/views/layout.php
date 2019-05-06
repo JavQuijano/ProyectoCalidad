@@ -68,9 +68,16 @@
                 <span>Listar empleados</span></a>
         </li>
 
+        <!-- Nav Item - Charts -->
+        <li class="nav-item">
+            <a class="nav-link" href="Finalizar_dia">
+                <i class="fas fa-fw fa-calendar-day"></i>
+                <span>Finalizar día</span></a>
+        </li>
+
         <li class="nav-item">
             <a class="nav-link" href="#">
-                <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-fw fa-newspaper"></i>
                 <span>Generar nómina</span></a>
         </li>
 

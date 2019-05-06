@@ -26,4 +26,5 @@ class Entrada extends CI_Model
         $this->db->insert($this->tabla, $entrada);
     }
 
+
 }

@@ -69,8 +69,33 @@ Swal.fire({
               showConfirmButton: false,
               timer: 1500
             })
-
         </script>";
+        }else{
+            if(isset($mensaje) && $mensaje == "3"){
+                echo "<script>
+              Swal.fire({
+              position: 'center',
+              type: 'warning',
+              title: 'No es posible registrar la entrada a esta hora.',
+              text: 'Solo tiene permitido registrar la entrada una hora antes o una hora después de la asignada.' ,
+              showConfirmButton: false,
+              timer: 3000
+                })
+                </script>";
+            }else{
+                if(isset($mensaje) && $mensaje == "4"){
+                    echo "<script>
+                  Swal.fire({
+                  position: 'center',
+                  type: 'warning',
+                  title: 'Su estado de empleado no es activo',
+                  text: 'Contacte a un administrador.' ,
+                  showConfirmButton: false,
+                  timer: 3000
+                    })
+                    </script>";
+                }
+            }
         }
     }
 }

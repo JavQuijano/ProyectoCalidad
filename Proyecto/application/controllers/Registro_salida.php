@@ -47,6 +47,16 @@ class Registro_salida extends CI_Controller {
         $this->load->view('salida',$arreglo);
     }
 
+    public function error_hora(){
+        $arreglo['mensaje'] = 3;
+        $this->load->view('entrada',$arreglo);
+    }
+
+    public function error_status(){
+        $arreglo['mensaje'] = 4;
+        $this->load->view('entrada',$arreglo);
+    }
+
     public function verificar_salida(){
         $empleado = new Empleado();
         $user_empleado = $this->input->post('code');
@@ -72,18 +82,56 @@ class Registro_salida extends CI_Controller {
         }
     }
 
+    public function verificar_hora($empleado_encontrado){
+        $hora_entrada = $empleado_encontrado->hora_entrada;
+
+        $formato = 'H:i:s';
+        $hora_entrada = DateTime::createFromFormat($formato, $hora_entrada);
+        $hora_a_guardar = DateTime::createFromFormat($formato, date($formato));
+
+        echo $hora_entrada->modify("+ 1 hour")->format('H:i:s') <  $hora_a_guardar->modify("+ 1 hour")->format('H:i:s') ."\n";
+
+        $hora_entrada_antes = $hora_entrada->modify("- 1 hour")->format('H:i:s');
+        $hora_entrada_despues = $hora_entrada->modify("+ 1 hour")->format('H:i:s') ;
+        $hora_a_guardar_empleado = $hora_a_guardar->modify("+ 0 hour")->format('H:i:s') ;
+
+        if($hora_a_guardar_empleado < $hora_entrada_antes || $hora_a_guardar_empleado > $hora_entrada_despues){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
+    public function verificar_status($empleado_encontrado){
+        $status = $empleado_encontrado->estatus;
+        if($status != 1){
+            return true;
+        }else{
+            false;
+        }
+    }
+
     public function registrar_salida($empleado_encontrado){
         $this->load->model('Salida');
         $salida= new stdClass();
+        date_default_timezone_set('America/Mexico_City');
         $salida->hora_salida= date("Y-m-d H:i:s");
         $salida->id_empleado = $empleado_encontrado[0]->id_empleado;
 
         if ($this->verificar_duplicado($salida->id_empleado)){
             $this->error_dia();
         }else{
-
-            $this->Entrada->guardar_entrada($salida);
-            $this->success();
+            if($this->verificar_hora($empleado_encontrado[0])){
+                $this->error_hora();
+            }else{
+                if($this->verificar_status($empleado_encontrado[0])){
+                    $this->error_status();
+                }else{
+                    $this->Entrada->guardar_entrada($salida);
+                    $this->success();
+                }
+            }
         }
     }
 }
