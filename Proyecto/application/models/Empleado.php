@@ -39,4 +39,9 @@ class Empleado extends CI_Model
         return $this->db->get()->result();
     }
 
+    public function update_empleado($id_empleado, $empleado){
+        return $this->db->where("id_empleado", $id_empleado)
+            ->update($this->tabla, $empleado);
+    }
+
 }

@@ -28,4 +28,29 @@ class Listar_empleados extends CI_Controller {
         echo json_encode($empleado[0]);
     }
 
+    public function guardar_empleado(){
+        /*
+         * nombres: nombres,
+            apellidos: apellidos,
+            hora_entrada: hora_entrada,
+            hora_salida: hora_salida,
+            estatus: estatus,
+            pago_por_dia: pago_por_dia,
+            descuento_por_dia: descuento_por_dia,
+            dias_trabajo: dias_trabajo
+         * */
+        $id_empleado = $this->input->post("id_empleado");
+        $empleado = new stdClass();
+        $empleado->nombres = $this->input->post("nombres");
+        $empleado->apellidos = $this->input->post("apellidos");
+        $empleado->hora_entrada = $this->input->post("hora_entrada");
+        $empleado->hora_salida = $this->input->post("hora_salida");
+        $empleado->estatus = $this->input->post("estatus");
+        $empleado->pago_por_dia = $this->input->post("pago_por_dia");
+        $empleado->dias_trabajo = $this->input->post("dias_trabajo");
+        $empleado->descuento_por_hora = $this->input->post("descuento_por_dia");
+
+        echo json_encode($this->empleado->update_empleado($id_empleado, $empleado));
+    }
+
 }
