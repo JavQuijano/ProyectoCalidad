@@ -29,16 +29,6 @@ class Listar_empleados extends CI_Controller {
     }
 
     public function guardar_empleado(){
-        /*
-         * nombres: nombres,
-            apellidos: apellidos,
-            hora_entrada: hora_entrada,
-            hora_salida: hora_salida,
-            estatus: estatus,
-            pago_por_dia: pago_por_dia,
-            descuento_por_dia: descuento_por_dia,
-            dias_trabajo: dias_trabajo
-         * */
         $id_empleado = $this->input->post("id_empleado");
         $empleado = new stdClass();
         $empleado->nombres = $this->input->post("nombres");
@@ -49,6 +39,15 @@ class Listar_empleados extends CI_Controller {
         $empleado->pago_por_dia = $this->input->post("pago_por_dia");
         $empleado->dias_trabajo = $this->input->post("dias_trabajo");
         $empleado->descuento_por_hora = $this->input->post("descuento_por_dia");
+
+        echo json_encode($this->empleado->update_empleado($id_empleado, $empleado));
+    }
+
+    public function cambiar_contrasena(){
+        $id_empleado = $this->input->post("id_empleado");
+        $contra_sin_encriptar = $this->input->post("nueva_contra");
+        $empleado = new stdClass();
+        $empleado->contra = crypt($contra_sin_encriptar, "jsoft");
 
         echo json_encode($this->empleado->update_empleado($id_empleado, $empleado));
     }

@@ -61,6 +61,7 @@
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalVacaciones">
                         Asignar Vacaciones
                     </button>
+                    <br>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalContra">
                         Cambiar Contraseña
                     </button>
@@ -73,7 +74,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Información Empleado</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -85,9 +86,32 @@
         </div>
     </div>
 
+    <div class="modal" id="modalContra" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cambiar Contraseña Empleado</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <br>
+                <form class="text-center" id="form_cambiar_contra" action="#" style="margin: 1rem;">
+                    <input type="hidden" id="id_empleado_contra" value="">
+                    <label for="nueva_contra">Nueva Contraseña: </label>
+                    <input type="text" id="nueva_contra">
+                    <input class="alert-primary" type="submit" id="submit" value="Cambiar Contraseña!" />
+                </form>
+                <br>
+            </div>
+        </div>
+    </div>
+
 </div>
 
-
+<!--------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------->
 
 <script>
     $(document).ready(function () {
@@ -168,6 +192,11 @@
             $("#form_editar").html('');
         });
 
+        $('#modalContra').on('show.bs.modal', function (event) {
+            const id_empleado = $(event.relatedTarget).parent().data("id-empleado");
+            $("#id_empleado_contra").val(id_empleado);
+        });
+
         $(document).on('click', '#submit_editar', function () {
             const id_empleado = $("#id_empleado").val();
             const nombres = $("#nombres").val();
@@ -216,6 +245,29 @@
                     }else{
                         //error
                         $('#exampleModal').modal('toggle');
+                    }
+                }
+            });
+        });
+
+        $("#form_cambiar_contra").submit(function () {
+            const id_empleado = $("#id_empleado_contra").val();
+            const nueva_contra = $("#nueva_contra").val();
+            $.ajax({
+                method: "POST",
+                url: "Listar_empleados/cambiar_contrasena",
+                data: {
+                    id_empleado: id_empleado,
+                    nueva_contra: nueva_contra
+                },
+                success: function(respuesta){
+                    const ver = JSON.parse(respuesta);
+                    if(ver){
+                        //exito
+                        $('#modalContra').modal('toggle');
+                    }else{
+                        //error
+                        $('#modalContra').modal('toggle');
                     }
                 }
             });
