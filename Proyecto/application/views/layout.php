@@ -63,7 +63,7 @@
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="Listar_empleados">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Listar empleados</span></a>
         </li>
@@ -76,7 +76,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="Generar_nomina">
                 <i class="fas fa-fw fa-newspaper"></i>
                 <span>Generar nómina</span></a>
         </li>

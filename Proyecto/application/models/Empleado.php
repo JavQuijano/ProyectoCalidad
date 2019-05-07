@@ -33,4 +33,10 @@ class Empleado extends CI_Model
         $this->db->insert($this->tabla, $empleado);
     }
 
+    public function obtener_empleados_admin(){
+        $this->db->select("*")
+            ->from("Empleados");
+        return $this->db->get()->result();
+    }
+
 }
