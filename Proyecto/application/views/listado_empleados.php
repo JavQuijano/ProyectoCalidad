@@ -86,6 +86,24 @@
         </div>
     </div>
 
+    <div class="modal" id="modalVacaciones" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Asignar Vacaciones Empleado</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <br>
+                <form class="text-center" id="form_vacaciones" action="#" style="margin: 1rem;">
+
+                </form>
+                <br>
+            </div>
+        </div>
+    </div>
+
     <div class="modal" id="modalContra" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -106,7 +124,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 <!--------------------------------------------------------------------------------------------------------------------->
@@ -271,6 +288,65 @@
                     }
                 }
             });
+        });
+
+        $('#modalVacaciones').on('show.bs.modal', function (event) {
+            const id_empleado = $(event.relatedTarget).parent().data("id-empleado");
+            $("#id_empleado_vacas").val(id_empleado);
+            $.ajax({
+                url: "Listar_empleados/obtener_vacaciones/"+id_empleado,
+                method: "GET",
+                success: function (respuesta) {
+                    respuesta = JSON.parse(respuesta);
+                    console.log(respuesta);
+                    if(respuesta === false){
+                        const html_sin = "" +
+                            "<input type=\"hidden\" id='id_empleado_vacas' value='"+id_empleado+"'>" +
+                            "<label for='fecha_inicio'>Fecha inicio: </label>" +
+                            "<input type='date' id=fecha_inicio />" +
+                            "<br>" +
+                            "<label for='fecha_termino'>Fecha termino: </label>" +
+                            "<input type='date' id=fecha_termino />" +
+                            "<br>" +
+                            "<input type='submit' value='Asignar Vacaciones'>";
+                        $("#form_vacaciones").append(html_sin);
+                    }else{
+                        const html_con = "" +
+                            "<p>El empleado ya cuenta con vacaciones en las siguientes fechas: </p>" +
+                            "<br>" +
+                            "<p>Del <b>"+respuesta[0].fecha_inicio+"</b> A <b>"+respuesta[0].fecha_termino+"</b></p>" +
+                            "<br>" +
+                            "<p>Desea reagendar sus vacaciones?</p>" +
+                            "<br>" +
+                            "<input type=\"hidden\" id=\"id_empleado_vacas\" value='"+id_empleado+"'>" +
+                            "<input type='button' value='Sí'/>" +
+                            "";
+                        $("#form_vacaciones").append(html_con);
+                    }
+                }
+            });
+        });
+
+        $('#modalVacaciones').on('hide.bs.modal', function () {
+            $("#form_vacaciones").html('');
+        });
+
+        $("#form_vacaciones").submit(function () {
+           const fecha_inicio = $("#fecha_inicio").val();
+           const fecha_termino = $("#fecha_termino").val();
+           const id_empleado = $("#id_empleado_vacas").val();
+           $.ajax({
+               method: "POST",
+               url:"Listar_empleados/asignar_vacaciones",
+               data: {
+                   fecha_inicio : fecha_inicio,
+                   fecha_termino : fecha_termino,
+                   id_empleado : id_empleado
+               },
+               success: function (respuesta) {
+
+               }
+           });
         });
     });
 </script>

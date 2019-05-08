@@ -43,13 +43,38 @@ class Listar_empleados extends CI_Controller {
         echo json_encode($this->empleado->update_empleado($id_empleado, $empleado));
     }
 
-    public function cambiar_contrasena(){
+    public function cambiar_contrasena()
+    {
         $id_empleado = $this->input->post("id_empleado");
         $contra_sin_encriptar = $this->input->post("nueva_contra");
         $empleado = new stdClass();
         $empleado->contra = crypt($contra_sin_encriptar, "jsoft");
 
         echo json_encode($this->empleado->update_empleado($id_empleado, $empleado));
+    }
+
+    public function obtener_vacaciones($id_empleado){
+        $vacaciones = $this->empleado->obtener_vacaciones_empleado($id_empleado);
+        if(!empty($vacaciones)){
+            echo json_encode($vacaciones);
+        }else{
+            echo json_encode(false);
+        }
+    }
+
+    public function asignar_vacaciones(){
+        $nueva_vaca = new stdClass();
+        $nueva_vaca->id_empleado = $this->input->post("id_empleado");
+        $nueva_vaca->fecha_inicio = $this->input->post("fecha_inicio");
+        $nueva_vaca->fecha_termino = $this->input->post("fecha_termino");
+        $nueva_vaca->fecha_registro = date("Y-m-d");
+
+        echo json_encode($this->empleado->registrar_vacaciones($nueva_vaca));
+
+        $empleado = new stdClass();
+        $empleado->estatus = 4;
+        $this->empleado->update_empleado($nueva_vaca->id_empleado, $empleado);
+
     }
 
 }
