@@ -49,12 +49,12 @@ class Registro_salida extends CI_Controller {
 
     public function error_hora(){
         $arreglo['mensaje'] = 3;
-        $this->load->view('entrada',$arreglo);
+        $this->load->view('salida',$arreglo);
     }
 
     public function error_status(){
         $arreglo['mensaje'] = 4;
-        $this->load->view('entrada',$arreglo);
+        $this->load->view('salida',$arreglo);
     }
 
     public function verificar_salida(){
@@ -83,19 +83,21 @@ class Registro_salida extends CI_Controller {
     }
 
     public function verificar_hora($empleado_encontrado){
-        $hora_entrada = $empleado_encontrado->hora_entrada;
+        $hora_salida = $empleado_encontrado->hora_salida;
 
         $formato = 'H:i:s';
-        $hora_entrada = DateTime::createFromFormat($formato, $hora_entrada);
+        $hora_salida_1 = DateTime::createFromFormat($formato, $hora_salida);
+        $hora_salida_2 = DateTime::createFromFormat($formato, $hora_salida);
+
         $hora_a_guardar = DateTime::createFromFormat($formato, date($formato));
 
-        echo $hora_entrada->modify("+ 1 hour")->format('H:i:s') <  $hora_a_guardar->modify("+ 1 hour")->format('H:i:s') ."\n";
-
-        $hora_entrada_antes = $hora_entrada->modify("- 1 hour")->format('H:i:s');
-        $hora_entrada_despues = $hora_entrada->modify("+ 1 hour")->format('H:i:s') ;
+        $hora_salida_antes = $hora_salida_1->modify("- 1 hour")->format('H:i:s');
+        $hora_salida_despues = $hora_salida_2->modify("+ 1 hour")->format('H:i:s') ;
         $hora_a_guardar_empleado = $hora_a_guardar->modify("+ 0 hour")->format('H:i:s') ;
 
-        if($hora_a_guardar_empleado < $hora_entrada_antes || $hora_a_guardar_empleado > $hora_entrada_despues){
+
+
+        if($hora_a_guardar_empleado < $hora_salida_antes || $hora_a_guardar_empleado > $hora_salida_despues){
             return true;
         }else{
             return false;
@@ -128,7 +130,7 @@ class Registro_salida extends CI_Controller {
                 if($this->verificar_status($empleado_encontrado[0])){
                     $this->error_status();
                 }else{
-                    $this->Entrada->guardar_entrada($salida);
+                    $this->Salida->guardar_salida($salida);
                     $this->success();
                 }
             }

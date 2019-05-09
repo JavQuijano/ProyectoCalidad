@@ -21,13 +21,26 @@
                     </div>
                     <div class="col-md-6">
                         <label>Estatus</label>
-                        <input type="text" name="estatus" class="form-control" placeholder="1,2,3,4">
+                        <!--<input type="text" name="estatus" class="form-control" placeholder="1,2,3,4">-->
+                        <select name="estatus" type="text" class="form-control">
+                            <option value="1">Activo</option>
+                            <option value="2">De Baja</option>
+                            <option value="3">Suspendido</option>
+                            <option value="4">De Vacaciones</option>
+                        </select>
                         <label>Pago por dia</label>
                         <input type="number" name="pago_por_dia" class="form-control" placeholder="Introduce tu pago por día">
                         <label>Descuento por hora</label>
                         <input type="number" name="descuento_por_hora" class="form-control" placeholder="Introduce tu descuento por hora">
                         <label>Dias trabajo</label>
-                        <input type="text" name="dias_trabajo" class="form-control" placeholder="Introduce tus días de trabajo">
+                        <br>
+                        <input type="checkbox" name="dias_trabajo[]" value="Lunes">Lunes
+                        <input type="checkbox" name="dias_trabajo[]" value="Martes">Martes
+                        <input type="checkbox" name="dias_trabajo[]" value="Miercoles">Miercoles
+                        <input type="checkbox" name="dias_trabajo[]" value="Jueves">Jueves
+                        <input type="checkbox" name="dias_trabajo[]" value="Viernes">Viernes
+                        <input type="checkbox" name="dias_trabajo[]" value="Sabado">Sabado
+                        <input type="checkbox" name="dias_trabajo[]" value="Domingo">Domingo
                     </div>
                     <div class="col-md-12">
                         <label>Fecha inicio</label>

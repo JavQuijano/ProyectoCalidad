@@ -31,4 +31,11 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="d-flex mt-5 justify-content-center col-lg">
+            <form action="<?php echo base_url();?>index.php/Finalizar_dia/registrar_salidas_pendientes" method="post" class="form-group">
+                <button type="submit" class="btn btn-block">PRESIONAR AQUÍ</button>
+            </form>
+        </div>
+    </div>
 </div>

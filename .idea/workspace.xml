@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f3b6d62-e74f-41d5-bd5a-eb88a7de7619" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Proyecto/application/controllers/Finalizar_dia.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto/application/views/finalizar_dia.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Proyecto/application/models/Cumplido.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Proyecto/application/models/Excepcion.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/application/controllers/Finalizar_dia.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/controllers/Finalizar_dia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/application/controllers/Registro_empleados.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/controllers/Registro_empleados.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto/application/controllers/Registro_entrada.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/controllers/Registro_entrada.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto/application/controllers/Registro_salida.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/controllers/Registro_salida.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto/application/models/Entrada.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/models/Entrada.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/application/views/entrada.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/views/entrada.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/application/models/Salida.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/models/Salida.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/application/views/finalizar_dia.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/views/finalizar_dia.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto/application/views/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/views/layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/application/views/salida.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/views/salida.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto/application/views/registrar_empleado.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/views/registrar_empleado.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,37 +27,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Proyecto/application/views/layout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="79" column="48" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Proyecto/application/views/registrar_empleado.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="45" lean-forward="true" selection-end-line="45" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Proyecto/application/controllers/Finalizar_dia.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+            <state relative-caret-position="216">
+              <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Proyecto/application/views/finalizar_dia.php">
+        <entry file="file://$PROJECT_DIR$/Proyecto/application/views/layout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            <state relative-caret-position="210">
+              <caret line="73" column="39" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Proyecto/application/models/Cumplido.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Proyecto/application/models/Excepcion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -63,17 +65,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Proyecto/application/models/Entrada.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="18" column="45" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="45" />
+            <state relative-caret-position="238">
+              <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="20" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Proyecto/application/controllers/Registro_entrada.php">
+        <entry file="file://$PROJECT_DIR$/Proyecto/application/models/Salida.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="112" column="53" lean-forward="true" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="53" />
+            <state>
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -81,22 +83,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Proyecto/application/controllers/Registro_salida.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+            <state relative-caret-position="142">
+              <caret line="87" column="8" selection-start-line="87" selection-start-column="8" selection-end-line="88" selection-end-column="76" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Proyecto/application/models/Salida.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Proyecto/application/controllers/Registro_empleados.php">
+        <entry file="file://$PROJECT_DIR$/Proyecto/application/controllers/Registro_entrada.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="54" selection-end-column="1" />
+            <state relative-caret-position="219">
+              <caret line="69" column="40" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -104,6 +101,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Proyecto/assets/js/sb-admin-2.js">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Proyecto/assets/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -120,6 +126,14 @@
       <find>font-size</find>
       <find>valerie</find>
       <find>Agregar</find>
+      <find>ASSISOFT</find>
+      <find>sidebar-brand d-flex align-items-center</find>
+      <find>Bienvenido a Registrar Empleado</find>
+      <find>Estatus</find>
+      <find>obtener_entrada_por</find>
+      <find>obtener_empleado_por</find>
+      <find>obtener_entrada_duplicada</find>
+      <find>Finalizar</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,19 +144,22 @@
       <list>
         <option value="$PROJECT_DIR$/Proyecto/application/views/layout.php.html" />
         <option value="$PROJECT_DIR$/Proyecto/application/config/config.php" />
-        <option value="$PROJECT_DIR$/Proyecto/application/controllers/Registro_empleados.php" />
         <option value="$PROJECT_DIR$/Proyecto/application/views/header.php" />
         <option value="$PROJECT_DIR$/Proyecto/application/views/footer.php" />
         <option value="$PROJECT_DIR$/Proyecto/assets/js/plugins/bootsnav_files/css/bootsnav.css" />
-        <option value="$PROJECT_DIR$/Proyecto/application/views/registrar_empleado.php" />
-        <option value="$PROJECT_DIR$/Proyecto/application/controllers/Registro_entrada.php" />
         <option value="$PROJECT_DIR$/Proyecto/application/views/entrada.php" />
-        <option value="$PROJECT_DIR$/Proyecto/application/controllers/Registro_salida.php" />
         <option value="$PROJECT_DIR$/Proyecto/application/views/salida.php" />
-        <option value="$PROJECT_DIR$/Proyecto/application/views/layout.php" />
+        <option value="$PROJECT_DIR$/Proyecto/application/controllers/Registro_entrada.php" />
+        <option value="$PROJECT_DIR$/Proyecto/application/controllers/Registro_salida.php" />
+        <option value="$PROJECT_DIR$/Proyecto/application/views/registrar_empleado.php" />
+        <option value="$PROJECT_DIR$/Proyecto/application/controllers/Registro_empleados.php" />
+        <option value="$PROJECT_DIR$/Proyecto/application/views/finalizar_dia.php" />
+        <option value="$PROJECT_DIR$/Proyecto/application/models/Excepcion.php" />
+        <option value="$PROJECT_DIR$/Proyecto/application/models/Exito.php" />
         <option value="$PROJECT_DIR$/Proyecto/application/models/Entrada.php" />
         <option value="$PROJECT_DIR$/Proyecto/application/controllers/Finalizar_dia.php" />
-        <option value="$PROJECT_DIR$/Proyecto/application/views/finalizar_dia.php" />
+        <option value="$PROJECT_DIR$/Proyecto/application/models/Salida.php" />
+        <option value="$PROJECT_DIR$/Proyecto/application/views/layout.php" />
       </list>
     </option>
   </component>
@@ -208,6 +225,13 @@
               <item name="ProyectoCalidad" type="462c0819:PsiDirectoryNode" />
               <item name="Proyecto" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProyectoCalidad" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProyectoCalidad" type="462c0819:PsiDirectoryNode" />
+              <item name="Proyecto" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -223,6 +247,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ProyectoCalidad\Proyecto\application\models" />
       <recent name="C:\xampp\htdocs\ProyectoCalidad\Proyecto\assets\vendor" />
       <recent name="C:\xampp\htdocs\ProyectoCalidad\Proyecto\assets\js" />
       <recent name="C:\xampp\htdocs\ProyectoCalidad\Proyecto\assets\css" />
@@ -254,6 +279,8 @@
       <workItem from="1553661760889" duration="784000" />
       <workItem from="1553719190119" duration="3405000" />
       <workItem from="1557116771331" duration="8645000" />
+      <workItem from="1557186427533" duration="31000" />
+      <workItem from="1557362660035" duration="3315000" />
     </task>
     <task id="LOCAL-00001" summary="Registrar empleado sin validaciones">
       <created>1553661856173</created>
@@ -266,12 +293,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12938000" />
+    <option name="totallyTimeSpent" value="26199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19127516" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19664429" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -293,7 +321,7 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19127516" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19395973" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -365,79 +393,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Proyecto/assets/js/sb-admin-2.js">
+    <entry file="file://$PROJECT_DIR$/Proyecto/application/controllers/Login_administrador.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Proyecto/application/views/salida.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="100" column="17" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Proyecto/application/views/layout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="79" column="48" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Proyecto/application/controllers/Registro_empleados.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="54" selection-end-column="1" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Proyecto/application/controllers/Principal_administrador.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Proyecto/application/views/entrada.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="61" column="10" lean-forward="true" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Proyecto/application/models/Entrada.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="45" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Proyecto/application/controllers/Registro_entrada.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="112" column="53" lean-forward="true" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Proyecto/application/controllers/Registro_salida.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Proyecto/application/models/Salida.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Proyecto/application/controllers/Finalizar_dia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Proyecto/application/views/registrar_empleado.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="45" lean-forward="true" selection-end-line="45" selection-end-column="6" />
+        <state relative-caret-position="391">
+          <caret line="191" column="46" lean-forward="true" selection-start-line="191" selection-start-column="46" selection-end-line="191" selection-end-column="137" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Proyecto/application/views/finalizar_dia.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        <state relative-caret-position="510">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/application/views/registrar_empleado.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="57" selection-start-line="36" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/application/views/salida.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="100" column="17" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/application/controllers/Registro_empleados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/assets/js/sb-admin-2.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/application/models/Cumplido.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/application/controllers/Registro_entrada.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="69" column="40" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/application/models/Excepcion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/application/controllers/Registro_salida.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="87" column="8" selection-start-line="87" selection-start-column="8" selection-end-line="88" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/application/models/Entrada.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/application/models/Salida.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/application/controllers/Finalizar_dia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/application/views/layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="73" column="39" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
         </state>
       </provider>
     </entry>

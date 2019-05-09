@@ -40,7 +40,11 @@ class Registro_empleados extends CI_Controller {
         $empleado->hora_salida = $this->input->post('hora_salida');
         $empleado->estatus = $this->input->post('estatus');
         $empleado->pago_por_dia = $this->input->post('pago_por_dia');
-        $empleado->dias_trabajo = $this->input->post('dias_trabajo');
+        $empleado->dias_trabajo = "";
+        foreach($this->input->post('dias_trabajo') as $day) {
+            $empleado->dias_trabajo = ($empleado->dias_trabajo).",".($day);
+        }
+        $empleado->dias_trabajo = substr($empleado->dias_trabajo, 1);
         $empleado->descuento_por_hora = $this->input->post('descuento_por_hora');
         $empleado->fecha_creacion = date("Y-m-d H:i:s");
         $empleado->fecha_inicio = $this->input->post('fecha_inicio');

@@ -82,8 +82,6 @@ class Registro_entrada extends CI_Controller {
         $hora_entrada = DateTime::createFromFormat($formato, $hora_entrada);
         $hora_a_guardar = DateTime::createFromFormat($formato, date($formato));
 
-        echo $hora_entrada->modify("+ 1 hour")->format('H:i:s') <  $hora_a_guardar->modify("+ 1 hour")->format('H:i:s') ."\n";
-
         $hora_entrada_antes = $hora_entrada->modify("- 1 hour")->format('H:i:s');
         $hora_entrada_despues = $hora_entrada->modify("+ 1 hour")->format('H:i:s') ;
         $hora_a_guardar_empleado = $hora_a_guardar->modify("+ 0 hour")->format('H:i:s') ;

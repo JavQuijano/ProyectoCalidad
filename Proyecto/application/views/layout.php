@@ -29,7 +29,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="Principal_Administrador">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div>
@@ -69,7 +69,7 @@
         </li>
 
         <!-- Nav Item - Charts -->
-        <li class="nav-item">
+        <li hidden class="nav-item">
             <a class="nav-link" href="Finalizar_dia">
                 <i class="fas fa-fw fa-calendar-day"></i>
                 <span>Finalizar día</span></a>
