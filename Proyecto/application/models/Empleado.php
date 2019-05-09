@@ -33,4 +33,26 @@ class Empleado extends CI_Model
         $this->db->insert($this->tabla, $empleado);
     }
 
+    public function obtener_empleados_admin(){
+        $this->db->select("*")
+            ->from("Empleados");
+        return $this->db->get()->result();
+    }
+
+    public function update_empleado($id_empleado, $empleado){
+        return $this->db->where("id_empleado", $id_empleado)
+            ->update($this->tabla, $empleado);
+    }
+
+    public function obtener_vacaciones_empleado($id_empleado){
+        $this->db->select("*")
+            ->from("historialvacaciones")
+            ->where("fecha_termino >= CURDATE()")
+            ->where("id_empleado", $id_empleado);
+        return $this->db->get()->result();
+    }
+
+    public function registrar_vacaciones($nueva_vaca){
+        $this->db->insert("historialvacaciones", $nueva_vaca);
+    }
 }
