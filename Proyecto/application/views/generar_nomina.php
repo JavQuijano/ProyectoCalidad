@@ -48,7 +48,11 @@
                 <td><?echo $empleado_x->fecha_dia?></td>
                 <td><?echo "$".$empleado_x->pago_por_dia?></td>
                 <td><?echo "$".$empleado_x->descuento_por_hora?></td>
-                <td data-id_excepcion="<?php echo $empleado_x->id_excepcion?>">
+                <td
+                    data-id_empleado="<?php echo $empleado_x->id_empleado?>"
+                    <?php if (!is_null($empleado_x->id_entrada)){ echo "data-hora_entrada='".$empleado_x->hora_entrada."'"; }else{ echo "data-hora_entrada=''";} ?>
+                    <?php if (!is_null($empleado_x->id_salida)){ echo "data-hora_salida='".$empleado_x->hora_salida."'"; }else{ echo "data-hora_salida=''";} ?>
+                >
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_excepcion">
                         Editar
                     </button>
@@ -69,8 +73,13 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form id="form_editar" action="#">
-
+                <form id="form_excepcion" action="#" style="padding: 1rem">
+                    <input type="hidden" id="id_empleado" value="">
+                    <label>Hora Entrada: <input type="time" id="hora_entrada"></label>
+                    <br>
+                    <label>Hora Salida: <input type="time" id="hora_salida"></label>
+                    <br>
+                    <input type="submit" value="Guardar Horas">
                 </form>
             </div>
         </div>
@@ -88,4 +97,40 @@
             }
         });
     });
+
+    $("#modal_excepcion").on('show.bs.modal', function (event) {
+        const id_empleado = $(event.relatedTarget).parent().data("id_empleado");
+        const hora_entrada = $(event.relatedTarget).parent().data("hora_entrada");
+        const hora_salida = $(event.relatedTarget).parent().data("hora_salida");
+
+        $("#id_empleado").val(id_empleado);
+        $("#hora_entrada").val(hora_entrada);
+        $("#hora_salida").val(hora_salida);
+    });
+
+    $("#form_excepcion").submit(function () {
+        const id_empleado = $("#id_empleado").val();
+        const hora_entrada = $("#hora_entrada").val();
+        const hora_salida = $("#hora_salida").val();
+        $.ajax({
+            method: "POST",
+            url: "Generar_nomina/registrar_horas_excepcion",
+            data:{
+                id_empleado : id_empleado,
+                hora_entrada : hora_entrada,
+                hora_salida : hora_salida
+            },
+            success: function (respuesta) {
+                const ver = JSON.parse(respuesta);
+                if(ver){
+                    //exito
+                    $('#modal_excepcion').modal('toggle');
+                }else{
+                    //error
+                    $('#modal_excepcion').modal('toggle');
+                }
+            }
+        });
+    });
+
 </script>

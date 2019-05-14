@@ -14,7 +14,7 @@ class Generar_nomina extends CI_Controller
         $empleados_excepcion = $this->empleado->obtener_empleados_excepcion();
 
         $array['empleados_cumplidos'] = $this->empleados_cumplidos_final($empleados_cumplidos);
-        $array['empleados_excepcion'] = $this->empleados_excepcion_final($empleados_excepcion);
+        $array['empleados_excepcion'] = $empleados_excepcion;
 
         $this->load->view('header');
         $this->load->view('footer');
@@ -36,13 +36,26 @@ class Generar_nomina extends CI_Controller
         return $empleados_cumplidos;
     }
 
-    private function empleados_excepcion_final($empleados_excepcion){
-        return $empleados_excepcion;
+    private function calcular_horas_excepcion($hora_entrada, $hora_salida){
+        $time1 = strtotime($hora_entrada);
+        $time2 = strtotime($hora_salida);
+        $dif = round(abs($time2 - $time1) / 3600,2);
+        return $dif;
     }
 
     public function registrar_horas_cumplidos(){
         $empleados_cumplidos = $this->empleados_cumplidos_final($this->empleado->obtener_empleados_cumplidos());
         $this->empleado->registrar_cumplidos($empleados_cumplidos);
+        echo json_encode(true);
+    }
+
+    public function registrar_horas_excepcion(){
+        $id_empleado = $this->input->post("id_empleado");
+        $hora_entrada = $this->input->post("hora_entrada");
+        $hora_salida = $this->input->post("hora_salida");
+
+        $empleado = new stdClass();
+
         return true;
     }
 }

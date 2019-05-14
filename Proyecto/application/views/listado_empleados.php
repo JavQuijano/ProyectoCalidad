@@ -344,7 +344,14 @@
                    id_empleado : id_empleado
                },
                success: function (respuesta) {
-
+                   const ver = JSON.parse(respuesta);
+                   if(ver){
+                       //exito
+                       $('#modalVacaciones').modal('toggle');
+                   }else{
+                       //error
+                       $('#modalVacaciones').modal('toggle');
+                   }
                }
            });
         });
