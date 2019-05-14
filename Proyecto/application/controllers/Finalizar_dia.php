@@ -39,6 +39,18 @@ class Finalizar_dia extends CI_Controller {
                 $this->Cumplido->guardar_cumplido($cumplido);
             }
         }
+        $this->load->model('Empleado');
+        $empleado = new Empleado();
+        $empleados_vacaciones = $empleado->obtener_empleado_por("estatus","4");
+        foreach($empleado_vacaciones as $un_empleado){
+            $this->load->model('Cumplido');
+            $cumplido = new stdClass();
+            $cumplido->fecha_dia = date("Y-m-d");
+            $cumplido->id_empleado = $un_empleado->id_empleado;
+            $cumplido->id_entrada = null;
+            $cumplido->id_salida = null;
+            $this->Cumplido->guardar_cumplido($cumplido);
+        }
 
     }
 

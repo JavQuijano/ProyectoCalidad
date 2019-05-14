@@ -53,7 +53,21 @@ class Registro_empleados extends CI_Controller {
 
 
         $this->empleado->guardar_empleado($empleado);
-        redirect(base_url()."index.php/Registro_empleados");
+        $this->success();
+        //redirect(base_url()."index.php/Registro_empleados");
+    }
+
+    public function success()
+    {
+        $array['bienvenida'] = "1";
+        $this->load->view('header');
+        $this->load->view('footer');
+
+        //$this->load->view('registrar_empleado', $array);
+        $data = array();
+        $data['content'] = $this->load->view('registrar_empleado', $array,true);
+        $this->load->view('layout',$data, false);
+
     }
 
 }
