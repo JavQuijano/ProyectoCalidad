@@ -94,4 +94,14 @@ class Empleado extends CI_Model
                 ->update("historialcumplidos", $temp_update);
         }
     }
+
+    public function registrar_excepcion($empleado, $id_excepcion){
+        $this->db->insert("horastrabajadas", $empleado);
+
+        $temp_update = new stdClass();
+        $temp_update->flag_registrado = 1;
+
+        $this->db->where("id_excepcion", $id_excepcion)
+            ->update("historialexcepciones", $temp_update);
+    }
 }

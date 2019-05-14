@@ -50,12 +50,18 @@ class Generar_nomina extends CI_Controller
     }
 
     public function registrar_horas_excepcion(){
+        $id_excepcion = $this->input->post("id_excepcion");
         $id_empleado = $this->input->post("id_empleado");
         $hora_entrada = $this->input->post("hora_entrada");
         $hora_salida = $this->input->post("hora_salida");
 
         $empleado = new stdClass();
+        $empleado->id_empleado = $id_empleado;
+        $empleado->cantidad_horas = $this->calcular_horas_excepcion($hora_entrada, $hora_salida);
+        $empleado->dia_registro = date("Y-m-d");
 
-        return true;
+        $this->empleado->registrar_excepcion($empleado, $id_excepcion);
+
+        echo json_encode(true);
     }
 }
