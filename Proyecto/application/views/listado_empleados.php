@@ -24,7 +24,7 @@
                     }else if($empleado->estatus == 2){
                         echo "<span style='color: red;'>Baja</span>";
                     }else if($empleado->estatus == 3){
-                        echo "<span style='color: orange;'>Otro</span>";
+                        echo "<span style='color: orange;'>Suspendido</span>";
                     }else if($empleado->estatus == 4){
                         echo "<span style='color: blue;'>Vacaciones</span>";
                     }
@@ -149,8 +149,8 @@
                         "<label for='estatus'>Estatus:</label>&nbsp;" +
                         "<select  id='estatus'  required >" +
                             "<option value='1'>Activo</option>" +
-                            "<option value='2'>De Baja</option>" +
-                            "<option value='3'>Otro</option>" +
+                            "<option value='2'>Baja</option>" +
+                            "<option value='3'>Suspendido</option>" +
                         "</select>"+
                         "<br>\n" +
                         "<label for=\"hora_entrada\">Hora Entrada:</label>&nbsp;\n" +
@@ -344,7 +344,14 @@
                    id_empleado : id_empleado
                },
                success: function (respuesta) {
-
+                   const ver = JSON.parse(respuesta);
+                   if(ver){
+                       //exito
+                       $('#modalVacaciones').modal('toggle');
+                   }else{
+                       //error
+                       $('#modalVacaciones').modal('toggle');
+                   }
                }
            });
         });
