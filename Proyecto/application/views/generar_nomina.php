@@ -144,5 +144,15 @@
             }
         });
     });
+    
+    $("#generar_nomina").click(function () {
+        $.ajax({
+            method: "POST",
+            url: "Generar_nomina/generar_nomina_final",
+            success: function (respuesta) {
+                respuesta = JSON.parse(respuesta);
+            }
+        });
+    });
 
 </script>
