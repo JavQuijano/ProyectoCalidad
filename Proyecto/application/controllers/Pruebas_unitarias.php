@@ -3,19 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pruebas_unitarias extends CI_Controller {
 
-    public function Verificar_Status_Test(){
-        $test_name = 'Verificar Status';
-        $status_test = 1;
-        $expected_result = true;
-
-        
-        $this->load->library('../controllers/Registro_entrada');
-        $obj = new $this->Registro_entrada();
-        $result=$obj->verificar_estatus($status_test);
-        echo $this->unit->run($result, $expected_result, $test_name);
-
-    }
-    
 
     public function obtenerEmpleadoTest()
     {
@@ -23,15 +10,15 @@ class Pruebas_unitarias extends CI_Controller {
         $resultado=new stdClass();
         $resultado->id_empleado ="1";
         $resultado->usuario="asd";
-        $resultado->contra="123";
-        $resultado->nombres="asd";
-        $resultado->apellidos="asd";
-        $resultado->hora_entrada='19:01:00';
-        $resultado->hora_salida='12:03:00';
+        $resultado->contra="jsMPiSr0qfxz6";
+        $resultado->nombres="Javier";
+        $resultado->apellidos="Quijano";
+        $resultado->hora_entrada='19:00:00';
+        $resultado->hora_salida='23:06:00';
         $resultado->estatus='1';
         $resultado->pago_por_dia="123.00";
-        $resultado->dias_trabajo='123';
-        $resultado->descuento_por_hora="123.00";
+        $resultado->dias_trabajo='Lunes,Martes';
+        $resultado->descuento_por_hora="123.50";
         $resultado->fecha_creacion="2019-03-27 05:29:58";
         $resultado->fecha_inicio="0222-02-22 14:02:00";
         $testName = "Prueba Funcion obtener_empleados_por()";
