@@ -69,5 +69,16 @@ class Pruebas_unitarias extends CI_Controller {
         $ExpectectResult = array($resultado);
         echo $this->unit->run($test,$ExpectectResult,$testName);
     }
+
+    public function obtenerNominaTest()
+    {
+        $test=$this->empleado->obtener_ultima_nomina();
+        $object = new stdClass();
+        $object->fecha = '2010-09-12 00:00:00';
+        $expectedResult=[];
+        $expectedResult[0]=$object;
+        $testName = "Prueba Funcion obtener_ultima_nomina()";
+        echo $this->unit->run($test,$expectedResult,$testName);
+    }
     
 }
