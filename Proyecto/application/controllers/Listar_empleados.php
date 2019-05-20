@@ -26,6 +26,7 @@ class Listar_empleados extends CI_Controller {
     public function get_empleado($id_empleado){
         $empleado = $this->empleado->obtener_empleado_por("id_empleado",$id_empleado);
         echo json_encode($empleado[0]);
+        return json_encode($empleado[0]);
     }
 
     public function guardar_empleado(){
@@ -41,6 +42,7 @@ class Listar_empleados extends CI_Controller {
         $empleado->descuento_por_hora = $this->input->post("descuento_por_dia");
 
         echo json_encode($this->empleado->update_empleado($id_empleado, $empleado));
+        return json_encode($this->empleado->update_empleado($id_empleado, $empleado));
     }
 
     public function cambiar_contrasena()
@@ -51,14 +53,17 @@ class Listar_empleados extends CI_Controller {
         $empleado->contra = crypt($contra_sin_encriptar, "jsoft");
 
         echo json_encode($this->empleado->update_empleado($id_empleado, $empleado));
+        return json_encode($this->empleado->update_empleado($id_empleado, $empleado));
     }
 
     public function obtener_vacaciones($id_empleado){
         $vacaciones = $this->empleado->obtener_vacaciones_empleado($id_empleado);
         if(!empty($vacaciones)){
             echo json_encode($vacaciones);
+            return true;
         }else{
             echo json_encode(false);
+            return false;
         }
     }
 
@@ -74,7 +79,7 @@ class Listar_empleados extends CI_Controller {
         $empleado = new stdClass();
         $empleado->estatus = 4;
         $this->empleado->update_empleado($nueva_vaca->id_empleado, $empleado);
-
+        return true;
     }
 
 }
