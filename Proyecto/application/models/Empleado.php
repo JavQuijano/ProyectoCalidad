@@ -104,4 +104,31 @@ class Empleado extends CI_Model
         $this->db->where("id_excepcion", $id_excepcion)
             ->update("historialexcepciones", $temp_update);
     }
+
+    public function obtener_horas_trabajadas_empleados(){
+        $fecha_actual = date("Y-m-d");
+        $this->db->select("id_hora, empleados.id_empleado, SUM(cantidad_horas) as cantidad_horas, pago_por_dia, hora_entrada, hora_salida")
+            ->from("horastrabajadas")
+            ->join("empleados", "horastrabajadas.id_empleado = empleados.id_empleado")
+            ->where("flag_pagado", 0)
+            ->where("dia_registro <= '".$fecha_actual."'")
+            ->group_by("horastrabajadas.id_empleado");
+        return $this->db->get()->result();
+    }
+
+    public function guardar_pago($pago, $id_empleado){
+        $this->db->insert("historialpagos", $pago);
+
+        $temp_update = new stdClass();
+        $temp_update->flag_pagado = 1;
+
+        $this->db->where("id_empleado", $id_empleado)
+            ->update("horastrabajadas", $temp_update);
+    }
+
+    public function obtener_ultima_nomina(){
+        $this->db->select("MAX(fecha) as fecha")
+            ->from("historialpagos");
+        return $this->db->get()->result();
+    }
 }

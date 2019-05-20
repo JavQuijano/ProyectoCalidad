@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f3b6d62-e74f-41d5-bd5a-eb88a7de7619" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Proyecto/application/models/Cumplido.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyecto/application/models/Excepcion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/application/controllers/Finalizar_dia.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/controllers/Finalizar_dia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/application/controllers/Registro_empleados.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/controllers/Registro_empleados.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/application/controllers/Registro_entrada.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/controllers/Registro_entrada.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/application/controllers/Registro_salida.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/controllers/Registro_salida.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/application/models/Entrada.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/models/Entrada.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/application/models/Salida.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/models/Salida.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/application/views/finalizar_dia.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/views/finalizar_dia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/application/views/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/views/layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto/application/views/registrar_empleado.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto/application/views/registrar_empleado.php" afterDir="false" />
-    </list>
+    <list default="true" id="3f3b6d62-e74f-41d5-bd5a-eb88a7de7619" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +22,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Proyecto/application/views/layout.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
               <caret line="73" column="39" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Proyecto/application/models/Empleado.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-328" />
           </provider>
         </entry>
       </file>
@@ -96,11 +90,6 @@
               <caret line="69" column="40" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Proyecto/assets/js/sb-admin-2.js">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -280,7 +269,7 @@
       <workItem from="1553719190119" duration="3405000" />
       <workItem from="1557116771331" duration="8645000" />
       <workItem from="1557186427533" duration="31000" />
-      <workItem from="1557362660035" duration="3315000" />
+      <workItem from="1557362660035" duration="4778000" />
     </task>
     <task id="LOCAL-00001" summary="Registrar empleado sin validaciones">
       <created>1553661856173</created>
@@ -293,11 +282,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26199000" />
+    <option name="totallyTimeSpent" value="27662000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19664429" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -498,6 +486,11 @@
         <state relative-caret-position="210">
           <caret line="73" column="39" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyecto/application/models/Empleado.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-328" />
       </provider>
     </entry>
   </component>

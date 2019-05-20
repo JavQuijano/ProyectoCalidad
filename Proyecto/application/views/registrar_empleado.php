@@ -1,4 +1,16 @@
-<?php echo $bienvenida ?>
+<?php
+if(isset($bienvenida) && $bienvenida == "1"){
+ echo "<script>
+Swal.fire({
+  position: 'center',
+  type: 'success',
+  title: 'Empleado registrado con éxito',
+  showConfirmButton: false,
+  timer: 1500
+})
+</script>";
+}
+?>
 <div class="container-fluid">
 
     <div class="row">
@@ -11,13 +23,13 @@
                         <label>Contraseña</label>
                         <input type="password" name="contra" class="form-control" placeholder="Introduce tu contraseña"> -->
                         <label>Nombres</label>
-                        <input type="text" name="nombres" class="form-control" placeholder="Introduce tus nombres">
+                        <input type="text" name="nombres" class="form-control" placeholder="Introduce tus nombres" required>
                         <label>Apellidos</label>
-                        <input type="text" name="apellidos" class="form-control" placeholder="Introduce tus apellidos">
+                        <input type="text" name="apellidos" class="form-control" placeholder="Introduce tus apellidos" required>
                         <label>Hora Entrada</label>
-                        <input type="time" name="hora_entrada" class="form-control" placeholder="Introduce tu hora de entrada">
+                        <input type="time" name="hora_entrada" class="form-control" placeholder="Introduce tu hora de entrada" required>
                         <label>Hora Salida</label>
-                        <input type="time" name="hora_salida" class="form-control" placeholder="Introduce tu hora de salida">
+                        <input type="time" name="hora_salida" class="form-control" placeholder="Introduce tu hora de salida" required>
                     </div>
                     <div class="col-md-6">
                         <label>Estatus</label>
@@ -29,9 +41,9 @@
                             <option value="4">De Vacaciones</option>
                         </select>
                         <label>Pago por dia</label>
-                        <input type="number" name="pago_por_dia" class="form-control" placeholder="Introduce tu pago por día">
+                        <input type="number" name="pago_por_dia" class="form-control" placeholder="Introduce tu pago por día" required>
                         <label>Descuento por hora</label>
-                        <input type="number" name="descuento_por_hora" class="form-control" placeholder="Introduce tu descuento por hora">
+                        <input type="number" name="descuento_por_hora" class="form-control" placeholder="Introduce tu descuento por hora" required>
                         <label>Dias trabajo</label>
                         <br>
                         <input type="checkbox" name="dias_trabajo[]" value="Lunes">Lunes
@@ -44,7 +56,7 @@
                     </div>
                     <div class="col-md-12">
                         <label>Fecha inicio</label>
-                        <input type="datetime-local" name="fecha_inicio" class="form-control" placeholder="Introduce tu fecha de inicio">
+                        <input type="datetime-local" name="fecha_inicio" class="form-control" placeholder="Introduce tu fecha de inicio" required>
                     </div>
                     <div class="row">
                         <div class="col-md-12">

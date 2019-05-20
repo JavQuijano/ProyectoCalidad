@@ -115,9 +115,9 @@
                 </div>
                 <br>
                 <form class="text-center" id="form_cambiar_contra" action="#" style="margin: 1rem;">
-                    <input type="hidden" id="id_empleado_contra" value="">
+                    <input type="hidden" id="id_empleado_contra" value="" required>
                     <label for="nueva_contra">Nueva Contraseña: </label>
-                    <input type="text" id="nueva_contra">
+                    <input type="text" id="nueva_contra" required>
                     <input class="alert-primary" type="submit" id="submit" value="Cambiar Contraseña!" />
                 </form>
                 <br>
@@ -259,9 +259,23 @@
                     if(ver){
                         //exito
                         $('#exampleModal').modal('toggle');
+                        Swal.fire({
+                            position: 'center',
+                            type: 'success',
+                            title: 'La información del empleado fue editada exitosamente!',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
                     }else{
                         //error
                         $('#exampleModal').modal('toggle');
+                        Swal.fire({
+                            position: 'center',
+                            type: 'error',
+                            title: 'Ocurrio un error con el ingreso de los datos, verifique la información.',
+                            showConfirmButton: false,
+                            timer: 2500
+                        });
                     }
                 }
             });
@@ -282,9 +296,23 @@
                     if(ver){
                         //exito
                         $('#modalContra').modal('toggle');
+                        Swal.fire({
+                            position: 'center',
+                            type: 'success',
+                            title: 'La contraseña fue cambiada exitosamente!',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
                     }else{
                         //error
                         $('#modalContra').modal('toggle');
+                        Swal.fire({
+                            position: 'center',
+                            type: 'error',
+                            title: 'Ocurrio un error con el ingreso de los datos, verifique la información.',
+                            showConfirmButton: false,
+                            timer: 2500
+                        });
                     }
                 }
             });
@@ -303,10 +331,10 @@
                         const html_sin = "" +
                             "<input type=\"hidden\" id='id_empleado_vacas' value='"+id_empleado+"'>" +
                             "<label for='fecha_inicio'>Fecha inicio: </label>" +
-                            "<input type='date' id=fecha_inicio />" +
+                            "<input type='date' id=fecha_inicio required />" +
                             "<br>" +
                             "<label for='fecha_termino'>Fecha termino: </label>" +
-                            "<input type='date' id=fecha_termino />" +
+                            "<input type='date' id=fecha_termino required/>" +
                             "<br>" +
                             "<input type='submit' value='Asignar Vacaciones'>";
                         $("#form_vacaciones").append(html_sin);
@@ -348,9 +376,23 @@
                    if(ver){
                        //exito
                        $('#modalVacaciones').modal('toggle');
+                       Swal.fire({
+                           position: 'center',
+                           type: 'success',
+                           title: 'La vacaciones se asignaron exitosamente!',
+                           showConfirmButton: false,
+                           timer: 1500
+                       });
                    }else{
                        //error
                        $('#modalVacaciones').modal('toggle');
+                       Swal.fire({
+                           position: 'center',
+                           type: 'error',
+                           title: 'Ocurrio un error con el ingreso de los datos, verifique la información.',
+                           showConfirmButton: false,
+                           timer: 2500
+                       });
                    }
                }
            });

@@ -80,11 +80,11 @@
                     </button>
                 </div>
                 <form id="form_excepcion" action="#" style="padding: 1rem">
-                    <input type="hidden" id="id_empleado" value="">
-                    <input type="hidden" id="id_excepcion" value="">
-                    <label>Hora Entrada: <input type="time" id="hora_entrada"></label>
+                    <input type="hidden" id="id_empleado" value="" required>
+                    <input type="hidden" id="id_excepcion" value="" required>
+                    <label>Hora Entrada: <input type="time" id="hora_entrada" required></label>
                     <br>
-                    <label>Hora Salida: <input type="time" id="hora_salida"></label>
+                    <label>Hora Salida: <input type="time" id="hora_salida" required></label>
                     <br>
                     <input type="submit" value="Guardar Horas">
                 </form>
@@ -100,7 +100,13 @@
             method: "POST",
             url: "Generar_nomina/registrar_horas_cumplidos",
             success: function (respuesta) {
-                location.reload();
+                Swal.fire({
+                    position: 'center',
+                    type: 'success',
+                    title: 'Las horas de los trabajadores de registraron con exito!',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             }
         });
     });
@@ -136,10 +142,52 @@
                 if(ver){
                     //exito
                     $('#modal_excepcion').modal('toggle');
-                    location.reload();
+                    Swal.fire({
+                        position: 'center',
+                        type: 'success',
+                        title: 'Las horas del empleado se registraron con exito!',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                 }else{
                     //error
                     $('#modal_excepcion').modal('toggle');
+                    Swal.fire({
+                        position: 'center',
+                        type: 'error',
+                        title: 'Ocurrio un error con el ingreso de los datos, verifique la información.',
+                        showConfirmButton: false,
+                        timer: 2500
+                    });
+                }
+            }
+        });
+    });
+    
+    $("#generar_nomina").click(function () {
+        $.ajax({
+            method: "POST",
+            url: "Generar_nomina/generar_nomina_final",
+            success: function (respuesta) {
+                respuesta = JSON.parse(respuesta);
+                if(respuesta){
+                    //exito
+                    Swal.fire({
+                        position: 'center',
+                        type: 'success',
+                        title: 'Las nómina de los empleados se generó exitosamente!',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }else{
+                    //error
+                    Swal.fire({
+                        position: 'center',
+                        type: 'error',
+                        title: 'La nómina se generó hace menos de 7 dias intentelo mas tarde',
+                        showConfirmButton: false,
+                        timer: 2500
+                    });
                 }
             }
         });
