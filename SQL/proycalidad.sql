@@ -2,10 +2,10 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 22-05-2019 a las 00:26:12
--- Versión del servidor: 10.1.38-MariaDB
--- Versión de PHP: 7.3.3
+-- Host: localhost
+-- Generation Time: May 22, 2019 at 12:47 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `proycalidad`
+-- Database: `proycalidad`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `administradores`
+-- Table structure for table `administradores`
 --
 
 CREATE TABLE `administradores` (
@@ -39,7 +39,7 @@ CREATE TABLE `administradores` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `empleados`
+-- Table structure for table `empleados`
 --
 
 CREATE TABLE `empleados` (
@@ -59,11 +59,11 @@ CREATE TABLE `empleados` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `empleados`
+-- Dumping data for table `empleados`
 --
 
 INSERT INTO `empleados` (`id_empleado`, `usuario`, `contra`, `nombres`, `apellidos`, `hora_entrada`, `hora_salida`, `estatus`, `pago_por_dia`, `dias_trabajo`, `descuento_por_hora`, `fecha_creacion`, `fecha_inicio`) VALUES
-(1, 'asd', 'js/V.pZCjkSkE', 'asd', 'asd', '16:50:00', '16:50:00', 1, 123.00, '', 123.00, '2019-03-27 05:29:58', '0222-02-22 14:02:00'),
+(1, 'asd', 'js/V.pZCjkSkE', 'asd', 'asd', '16:50:00', '16:50:00', 1, 123.00, 'Lunes,Martes', 123.00, '2019-03-27 05:29:58', '0222-02-22 14:02:00'),
 (4, 'asd3', 'js/V.pZCjkSkE', 'nombre', 'asd', '16:50:00', '16:50:00', 1, 123.00, '', 123.00, '2019-03-27 05:34:48', '0222-02-22 14:02:00'),
 (5, 'asd34', '123', 'asd', 'asd', '19:01:00', '12:03:00', 1, 123.00, '123', 123.00, '2019-03-27 05:35:31', '0222-02-22 14:02:00'),
 (6, 'Moyses55', '0', 'Moises', 'Barabachano', '14:22:00', '14:22:00', 2, 2000.00, 'Lunes,Martes', 20.00, '2019-05-03 07:47:33', '2018-02-22 02:19:00'),
@@ -91,7 +91,7 @@ INSERT INTO `empleados` (`id_empleado`, `usuario`, `contra`, `nombres`, `apellid
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `historialcumplidos`
+-- Table structure for table `historialcumplidos`
 --
 
 CREATE TABLE `historialcumplidos` (
@@ -104,7 +104,7 @@ CREATE TABLE `historialcumplidos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `historialcumplidos`
+-- Dumping data for table `historialcumplidos`
 --
 
 INSERT INTO `historialcumplidos` (`id_cumplido`, `id_empleado`, `fecha_dia`, `id_entrada`, `id_salida`, `flag_registrado`) VALUES
@@ -124,7 +124,7 @@ INSERT INTO `historialcumplidos` (`id_cumplido`, `id_empleado`, `fecha_dia`, `id
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `historialentradas`
+-- Table structure for table `historialentradas`
 --
 
 CREATE TABLE `historialentradas` (
@@ -134,7 +134,7 @@ CREATE TABLE `historialentradas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `historialentradas`
+-- Dumping data for table `historialentradas`
 --
 
 INSERT INTO `historialentradas` (`hora_entrada`, `id_entrada`, `id_empleado`) VALUES
@@ -146,7 +146,7 @@ INSERT INTO `historialentradas` (`hora_entrada`, `id_entrada`, `id_empleado`) VA
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `historialestatus`
+-- Table structure for table `historialestatus`
 --
 
 CREATE TABLE `historialestatus` (
@@ -161,7 +161,7 @@ CREATE TABLE `historialestatus` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `historialexcepciones`
+-- Table structure for table `historialexcepciones`
 --
 
 CREATE TABLE `historialexcepciones` (
@@ -174,7 +174,7 @@ CREATE TABLE `historialexcepciones` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `historialexcepciones`
+-- Dumping data for table `historialexcepciones`
 --
 
 INSERT INTO `historialexcepciones` (`id_excepcion`, `fecha_dia`, `id_empleado`, `id_entrada`, `id_salida`, `flag_registrado`) VALUES
@@ -188,7 +188,7 @@ INSERT INTO `historialexcepciones` (`id_excepcion`, `fecha_dia`, `id_empleado`, 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `historialpagos`
+-- Table structure for table `historialpagos`
 --
 
 CREATE TABLE `historialpagos` (
@@ -199,7 +199,7 @@ CREATE TABLE `historialpagos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `historialpagos`
+-- Dumping data for table `historialpagos`
 --
 
 INSERT INTO `historialpagos` (`id_pago`, `id_empleado`, `cantidad`, `fecha`) VALUES
@@ -214,7 +214,7 @@ INSERT INTO `historialpagos` (`id_pago`, `id_empleado`, `cantidad`, `fecha`) VAL
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `historialsalidas`
+-- Table structure for table `historialsalidas`
 --
 
 CREATE TABLE `historialsalidas` (
@@ -224,7 +224,7 @@ CREATE TABLE `historialsalidas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `historialsalidas`
+-- Dumping data for table `historialsalidas`
 --
 
 INSERT INTO `historialsalidas` (`id_salida`, `id_empleado`, `hora_salida`) VALUES
@@ -239,7 +239,7 @@ INSERT INTO `historialsalidas` (`id_salida`, `id_empleado`, `hora_salida`) VALUE
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `historialvacaciones`
+-- Table structure for table `historialvacaciones`
 --
 
 CREATE TABLE `historialvacaciones` (
@@ -251,7 +251,7 @@ CREATE TABLE `historialvacaciones` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `historialvacaciones`
+-- Dumping data for table `historialvacaciones`
 --
 
 INSERT INTO `historialvacaciones` (`id_vacacion`, `id_empleado`, `fecha_inicio`, `fecha_termino`, `fecha_registro`) VALUES
@@ -263,7 +263,7 @@ INSERT INTO `historialvacaciones` (`id_vacacion`, `id_empleado`, `fecha_inicio`,
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `horastrabajadas`
+-- Table structure for table `horastrabajadas`
 --
 
 CREATE TABLE `horastrabajadas` (
@@ -275,7 +275,7 @@ CREATE TABLE `horastrabajadas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `horastrabajadas`
+-- Dumping data for table `horastrabajadas`
 --
 
 INSERT INTO `horastrabajadas` (`id_hora`, `id_empleado`, `cantidad_horas`, `dia_registro`, `flag_pagado`) VALUES
@@ -308,115 +308,115 @@ INSERT INTO `horastrabajadas` (`id_hora`, `id_empleado`, `cantidad_horas`, `dia_
 (33, 23, 0, '2019-05-21', 1);
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `administradores`
+-- Indexes for table `administradores`
 --
 ALTER TABLE `administradores`
   ADD PRIMARY KEY (`id_admin`),
   ADD UNIQUE KEY `usuario` (`usuario`);
 
 --
--- Indices de la tabla `empleados`
+-- Indexes for table `empleados`
 --
 ALTER TABLE `empleados`
   ADD PRIMARY KEY (`id_empleado`),
   ADD UNIQUE KEY `usuario` (`usuario`);
 
 --
--- Indices de la tabla `historialcumplidos`
+-- Indexes for table `historialcumplidos`
 --
 ALTER TABLE `historialcumplidos`
   ADD PRIMARY KEY (`id_cumplido`);
 
 --
--- Indices de la tabla `historialentradas`
+-- Indexes for table `historialentradas`
 --
 ALTER TABLE `historialentradas`
   ADD PRIMARY KEY (`id_entrada`);
 
 --
--- Indices de la tabla `historialexcepciones`
+-- Indexes for table `historialexcepciones`
 --
 ALTER TABLE `historialexcepciones`
   ADD PRIMARY KEY (`id_excepcion`);
 
 --
--- Indices de la tabla `historialpagos`
+-- Indexes for table `historialpagos`
 --
 ALTER TABLE `historialpagos`
   ADD PRIMARY KEY (`id_pago`),
   ADD KEY `id_empleado` (`id_empleado`);
 
 --
--- Indices de la tabla `historialsalidas`
+-- Indexes for table `historialsalidas`
 --
 ALTER TABLE `historialsalidas`
   ADD PRIMARY KEY (`id_salida`);
 
 --
--- Indices de la tabla `historialvacaciones`
+-- Indexes for table `historialvacaciones`
 --
 ALTER TABLE `historialvacaciones`
   ADD PRIMARY KEY (`id_vacacion`);
 
 --
--- Indices de la tabla `horastrabajadas`
+-- Indexes for table `horastrabajadas`
 --
 ALTER TABLE `horastrabajadas`
   ADD PRIMARY KEY (`id_hora`),
   ADD KEY `id_empleado` (`id_empleado`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `empleados`
+-- AUTO_INCREMENT for table `empleados`
 --
 ALTER TABLE `empleados`
   MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
--- AUTO_INCREMENT de la tabla `historialcumplidos`
+-- AUTO_INCREMENT for table `historialcumplidos`
 --
 ALTER TABLE `historialcumplidos`
   MODIFY `id_cumplido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT de la tabla `historialentradas`
+-- AUTO_INCREMENT for table `historialentradas`
 --
 ALTER TABLE `historialentradas`
   MODIFY `id_entrada` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `historialexcepciones`
+-- AUTO_INCREMENT for table `historialexcepciones`
 --
 ALTER TABLE `historialexcepciones`
   MODIFY `id_excepcion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT de la tabla `historialpagos`
+-- AUTO_INCREMENT for table `historialpagos`
 --
 ALTER TABLE `historialpagos`
   MODIFY `id_pago` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT de la tabla `historialsalidas`
+-- AUTO_INCREMENT for table `historialsalidas`
 --
 ALTER TABLE `historialsalidas`
   MODIFY `id_salida` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT de la tabla `historialvacaciones`
+-- AUTO_INCREMENT for table `historialvacaciones`
 --
 ALTER TABLE `historialvacaciones`
   MODIFY `id_vacacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT de la tabla `horastrabajadas`
+-- AUTO_INCREMENT for table `horastrabajadas`
 --
 ALTER TABLE `horastrabajadas`
   MODIFY `id_hora` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
