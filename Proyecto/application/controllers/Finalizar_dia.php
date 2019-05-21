@@ -10,7 +10,6 @@ class Finalizar_dia extends CI_Controller {
         $this->load->view('header');
         $this->load->view('footer');
 
-        //$this->load->view('registrar_empleado', $array);
         $data = array();
         $data['content'] = $this->load->view('finalizar_dia', $array,true);
         $this->load->view('layout',$data, false);

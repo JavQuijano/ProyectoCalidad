@@ -10,11 +10,11 @@ class Pruebas_unitarias extends CI_Controller {
         $resultado=new stdClass();
         $resultado->id_empleado ="1";
         $resultado->usuario="asd";
-        $resultado->contra="jsMPiSr0qfxz6";
-        $resultado->nombres="Javier";
-        $resultado->apellidos="Quijano";
-        $resultado->hora_entrada='19:00:00';
-        $resultado->hora_salida='23:06:00';
+        $resultado->contra="js/V.pZCjkSkE";
+        $resultado->nombres="asd";
+        $resultado->apellidos="asd";
+        $resultado->hora_entrada='16:50:00';
+        $resultado->hora_salida='16:50:00';
         $resultado->estatus='1';
         $resultado->pago_por_dia="123.00";
         $resultado->dias_trabajo='Lunes,Martes';
@@ -29,7 +29,7 @@ class Pruebas_unitarias extends CI_Controller {
     public function obtenerVacacionesEmpleadoTest()
     {
         $test=$this->empleado->obtener_vacaciones_empleado(1);
-        $expectedResult=[];
+        $expectedResult= Array();
         $testName = "Prueba Funcion obtener_vacaciones_empleado()";
         echo $this->unit->run($test,$expectedResult,$testName);
     }
@@ -62,7 +62,7 @@ class Pruebas_unitarias extends CI_Controller {
         $test=$this->empleado->obtener_ultima_nomina();
         $object = new stdClass();
         $object->fecha = '2010-09-12 00:00:00';
-        $expectedResult=[];
+        $expectedResult=Array();
         $expectedResult[0]=$object;
         $testName = "Prueba Funcion obtener_ultima_nomina()";
         echo $this->unit->run($test,$expectedResult,$testName);
