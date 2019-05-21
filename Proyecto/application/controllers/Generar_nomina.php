@@ -88,9 +88,14 @@ class Generar_nomina extends CI_Controller
                     $time1 = strtotime($empleado->hora_entrada);
                     $time2 = strtotime($empleado->hora_salida);
                     $dia = round(abs($time2 - $time1) / $this->segundos_en_una_hora, 0);
-                    $dias_trabajados = $empleado->cantidad_horas / $dia;
-                    $pago->cantidad = $dias_trabajados * $empleado->pago_por_dia;
-                    $this->empleado->guardar_pago($pago, $empleado->id_empleado);
+                    if($dia != 0){
+                        $dias_trabajados = $empleado->cantidad_horas / $dia;
+                        $pago->cantidad = $dias_trabajados * $empleado->pago_por_dia;
+                        $this->empleado->guardar_pago($pago, $empleado->id_empleado);
+                    }else{
+                        $pago->cantidad = 0;
+                        $this->empleado->guardar_pago($pago, $empleado->id_empleado);
+                    }
                 }
                 echo json_encode(true);
                 return true;
